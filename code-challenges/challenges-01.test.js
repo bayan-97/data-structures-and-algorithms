@@ -33,11 +33,16 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+   arr.push(value)
+
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+for (let i = 0; i < times; i++) {
+   callback(arr,num)
+  
+}
+return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,9 +64,25 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let arrlist=[]
+availableItems.forEach(element => {
+  if (element.available === true) {
+    
+    arrlist.push(element.name)
+    
+  }
+  
+});
+return arrlist
 };
+// describe('Testing challenge 3', () => {
+//   const inventory = [{ name: 'apples', available: true }, { name: 'pears', available: true }, { name: 'oranges', available: false }, { name: 'bananas', available: true }, { name: 'blueberries', available: false }];
 
+//   test('It should only add the available items to the list', () => {
+//     expect(createList(inventory)).toStrictEqual(['apples', 'pears', 'bananas']);
+//     expect(createList(inventory).length).toStrictEqual(3);
+//   });
+// });
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -77,8 +98,33 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+ arr.forEach((element,index) => {
+   if ((element%3)==0) {
+     arr[index]='Fizz'
+     
+   } 
+   if ((element%5)==0) {
+    arr[index]='Buzz'
+    
+  } 
+  if( ((element%3)==0) && ((element%5)==0)) {
+    arr[index]="Fizz Buzz"
+    
+  }
+
+
+   
+ });
+ return arr
 };
+// describe('Testing challenge 4', () => {
+//   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+
+//   test('It should print out messages or numbers', () => {
+//     expect(fizzbuzz(inputs)).toStrictEqual([1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'Fizz Buzz', 16]);
+//     expect(fizzbuzz(inputs).length).toStrictEqual(16);
+//   });
+// });
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
