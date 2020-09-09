@@ -12,8 +12,20 @@ const createServer = () => {
   const express = require('express');
   const app = express();
   
-
- 
+  const methodOverride = require("method-override");
+  app.use(methodOverride("_method"));
+  
+  app.get('/', (req,res)=>{
+    res.status(200).send("Have Good Day")
+  })
+  app.delet('/things/1', (req,res)=>{
+    
+    res.status(405).send("my name is bayan i am web developer.i love coding so much ")
+  })
+  app.get('*', (req,res)=>{
+    
+    res.status(404).send("food")
+  })
   var server = app.listen(3000, function () {
     var port = server.address().port;
     console.log('Example app listening at port', port);
@@ -30,9 +42,14 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 ------------------------------------------------------------------------------------------------ */
 
 const toTitleCase = (arr) => {
-  // Solution code here...
-};
-
+ let result= arr.map(element=>{
+//  let a=element.substring(0, 1).toUpperCase()
+let b= element.substring(0, 1).toUpperCase() + element.substring(1);
+return b
+ 
+});
+return result
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -105,7 +122,14 @@ let starWarsData = [{
 }];
 
 let biggerThanLuke = (arr) => {
-  // Solution code here...
+  let mass=arr[0].mass
+let res=arr.map(element=>{
+  if(element.mass>mass){
+    return element.name
+  }
+  let res2=res.join('-')
+  return res2
+})
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,7 +147,7 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  // Solution code here...
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
