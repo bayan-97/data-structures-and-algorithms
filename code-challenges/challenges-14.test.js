@@ -121,7 +121,7 @@ let starWarsData = [{
   gender: 'n/a'
 }];
 
-let biggerThanLuke = (arr) => {
+ biggerThanLuke = (arr) => {
   let mass=arr[0].mass
 let res=arr.map(element=>{
   if(element.mass>mass){
@@ -147,6 +147,7 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
+  return arr.sort(function(a, b){return a.property - b.property});
  
 };
 
