@@ -13,12 +13,12 @@ const createServer = () => {
   const app = express();
   
   const methodOverride = require("method-override");
-  app.use(methodOverride("_method"));
+ 
   
   app.get('/', (req,res)=>{
     res.status(200).send("Have Good Day")
   })
-  app.delet('/things/1', (req,res)=>{
+  app.delete('/things/1', (req,res)=>{
     
     res.status(405).send("my name is bayan i am web developer.i love coding so much ")
   })
@@ -121,15 +121,16 @@ let starWarsData = [{
   gender: 'n/a'
 }];
 
- biggerThanLuke = (arr) => {
-  let mass=arr[0].mass
-let res=arr.map(element=>{
-  if(element.mass>mass){
-    return element.name
-  }
-  let res2=res.join('-')
-  return res2
+ const biggerThanLuke = (arr) => {
+  
+  let res =[]
+arr.map(element=>{
+  if(element.mass>77){
+   res.push (element.name)
+  }  
 })
+return  res.join(' - ') 
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -147,10 +148,27 @@ This data could be sorted by name or price.
 ------------------------------------------------------------------------------------------------ */
 
 const sortBy = (property, arr) => {
-  return arr.sort(function(a, b){return a.property - b.property});
- 
-};
+  
+if (property==="price") {
+  arr.sort(
+  
+    function(a, b){
 
+      return a.price- b.price
+     
+    }
+    )
+} else if(property==="name") {
+  arr.sort(function(a, b){
+    var x = a.name.toLowerCase();
+    var y = b.name.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+  });
+ };
+ return arr
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 - Stretch Goal
 
