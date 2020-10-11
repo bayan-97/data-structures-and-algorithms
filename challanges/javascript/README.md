@@ -21,5 +21,5 @@ because it is easy way to solve this challange
 
 ## Solution
 
-![](../assets/arrayReverse.PNG) 
+![](/challanges/assets/arrayReverse.PNG) 
 
