@@ -27,7 +27,7 @@ describe('Testing challenge array-shift', () => {
       23,
       42,
     ]);
-    expect(insertShiftArray([2, 4, 6, 8], -5)).toEqual([2, 4, 5, 6, 8]);
+    expect(insertShiftArray([2, 4, 6, 8], -5)).toEqual([2, 4, -5, 6, 8]);
   });
   expect(insertShiftArray([4, 8, 15, 23, 42], 16).length).toEqual(6);
 });
