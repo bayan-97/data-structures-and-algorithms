@@ -21,14 +21,41 @@
 -  return false when searching for a value in the linked list that does not exist
 
 - return a collection of all the values that exist in the linked list
+## TEST B
+-  add a node to the end of the linked list
+
+-  add multiple nodes to the end of a linked list
+
+-  insert a node before a node located i the middle of a linked list
+
+-  insert a node before the first node of a linked list
+
+-  insert after a node in the middle of the linked list
+
+-  insert a node after the last node of the linked list
+
+
+
+TEST (A)
+
 ![](/challanges/assets/Capturecode5test.PNG)
 
 ![](/challanges/assets/Capturecode5test2.PNG)
+
+TEST (B)
+
+![](/challanges/assets/listed-testboard.PNG)
+
 
 ### results 
 ![](/challanges/assetsCapturetestresu.PNG)
 
 ![](/challanges/assets/Capturetestresu2.PNG)
+
+## result(B)
+
+![](/challanges/assets/listed-test2.PNG)
+![](/challanges/assets/listed-test2.PNG)
 
 
 
@@ -75,3 +102,34 @@ value as the string.
 
 
 ![](/challanges/assets/Capturecode53.PNG)
+4- `.append(value)` which added  a new node with the given value to the end of the list
+![](/challanges/assets/append.PNG)
+
+
+
+5.`insertBefore(value, newVal)` which we added  a new node with the given newValue immediately before the first value node
+
+![](/challanges/assets/insert-after.PNG)
+
+
+6.`insertAfter(value, newVal)` which add a new node with the given newValue immediately after the first value node
+
+![](/challanges/assets/insert-before.PNG)
+
+
+# whitebord (A)
+
+1- ![](/challanges/assets/Linked-list.PNG)
+
+2- ![](/challanges/assets/Linked-list2.PNGPNG)
+
+3- ![](/challanges/assets/Linked-list2.PNGPNG)
+
+# whitebord (B)
+
+
+1- ![](/challanges/assets/list-testwhit.PNG)
+
+1- ![](/challanges/assets/list-testwhit1.PNG)
+
+1- ![](/challanges/assets/list-testwhit2.PNG)

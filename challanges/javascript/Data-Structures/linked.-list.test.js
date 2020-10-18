@@ -73,3 +73,69 @@ describe('Linked List', () => {
     expect(list.toString()).toEqual(`{bayan}->{ahmad}->{omer}->{NULL}`);
   });
 });
+// RESULT B
+describe('Linked List', () => {
+  it('add a node to the end of the linked list', () => {
+    const list = new LL();
+    const initValue = 'mahmoud';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.append(newValue);
+    expect(list.head.next.value).toEqual(newValue);
+  });
+
+  it('add multiple nodes to the end of a linked list', () => {
+    const list = new LL();
+    const initValue = 'mahmoud';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.append(newValue);
+    const newValue1 = 'ahmad2';
+    list.append(newValue1);
+
+    expect(list.head.next.next.value).toEqual(newValue1);
+  });
+  it(' insert a node before a node located in the middle of a linked list', () => {
+    const list = new LL();
+    const initValue = 'mahmoud';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.insert(newValue);
+    const newValue1 = 'omer';
+    list.insert(newValue1);
+    list.insertbefore(newValue,'salma');
+    expect(list.head.next.value).toEqual('salma');
+  });
+  it(' Can successfully insert a node before the first node of a linked list', () => {
+    const list = new LL();
+    const initValue = 'bayan';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.insert(newValue);
+    // const newValue1 = 'omer';
+    list.insertbefore('bayan', 'ahmad');
+    expect(list.head.value).toEqual('ahmad');
+  });
+  it(' Can successfully insert after a node in the middle of the linked list', () => {
+    const list = new LL();
+    const initValue = 'bayan';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.insert(newValue);
+    const newValue1 = 'omer';
+    list.insert(newValue1);
+    list.insertAfter(newValue, 'salma');
+    expect(list.head.next.next.value).toEqual('salma');
+  });
+  it('Can successfully insert a node after the last node of the linked list', () => {
+    const list = new LL();
+    const initValue = 'bayan';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.insert(newValue);
+    const newValue1 = 'omer';
+    list.insert(newValue1);
+    list.insertAfter(newValue1,'salma');
+    expect(list.head.next.next.next.value).toEqual('salma');
+  });
+});
