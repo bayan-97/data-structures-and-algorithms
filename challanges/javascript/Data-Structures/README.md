@@ -75,3 +75,12 @@ value as the string.
 
 
 ![](/challanges/assets/Capturecode53.PNG)
+
+
+# whitebord (A)
+
+1- ![](/challanges/assets/Linked-list.PNG)
+
+2- ![](/challanges/assets/Linked-list2.PNGPNG)
+
+3- ![](/challanges/assets/Linked-list2.PNGPNG)
