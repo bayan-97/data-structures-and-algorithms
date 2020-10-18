@@ -102,6 +102,7 @@ value as the string.
 
 
 ![](/challanges/assets/Capturecode53.PNG)
+
 4- `.append(value)` which added  a new node with the given value to the end of the list
 ![](/challanges/assets/append.PNG)
 
@@ -117,6 +118,7 @@ value as the string.
 ![](/challanges/assets/insert-before.PNG)
 
 
+
 # whitebord (A)
 
 1- ![](/challanges/assets/Linked-list.PNG)
@@ -124,6 +126,7 @@ value as the string.
 2- ![](/challanges/assets/Linked-list2.PNGPNG)
 
 3- ![](/challanges/assets/Linked-list2.PNGPNG)
+
 
 # whitebord (B)
 
@@ -133,3 +136,4 @@ value as the string.
 1- ![](/challanges/assets/list-testwhit1.PNG)
 
 1- ![](/challanges/assets/list-testwhit2.PNG)
+
