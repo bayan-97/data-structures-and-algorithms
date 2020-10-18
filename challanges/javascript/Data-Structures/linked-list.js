@@ -75,14 +75,97 @@ class LinkedList {
     allValues = allValues + `{NULL}`;
     return allValues;
   }
-}
-// const ll = new LinkedList();
-// console.log('this is my List:', ll);
-// ll.insert(4);
-// console.log('After insert', ll);
-// ll.insert(5);
-// ll.insert(7);
-// console.log('After insert', ll);
-// console.log('After insert', ll.toString());
+  append(value) {
+    const node = new Node(value);
+    /*
+      node =  {
+          value:value,
+          next:null
+        }
+      */
+    if (!this.head) {
+      // only if the head is null
+      this.head = node;
+      return this;
+    }
 
-module.exports= LinkedList;
+    let currentNode = this.head;
+
+    while (currentNode.next) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = node;
+    return this;
+  }
+  insertbefore(value, newVal) {
+    if (this.head.value === value) {
+      let afterRes = this.head;
+      console.log('lll', this.head);
+      this.head.next = JSON.stringify(afterRes);
+      this.head.next = JSON.parse(this.head.next);
+      this.head.value = newVal;
+
+      return this;
+    }
+
+    let currentvalue = this.head.next;
+    while (currentvalue !== undefined) {
+      if (currentvalue.value === value) {
+        let afterRes = currentvalue;
+        currentvalue.next = JSON.stringify(afterRes);
+        currentvalue.next = JSON.parse(currentvalue.next);
+        currentvalue.value = newVal;
+        return this;
+      } else {
+        currentvalue = currentvalue.next;
+        if (currentvalue === null) {
+          return 'dont exist the value which insert';
+        }
+      }
+    }
+  }
+  insertAfter(value, newVal) {
+    if (this.head.value === value) {
+      let afterRes = this.head.next;
+      this.head.next.next = JSON.stringify(afterRes);
+      this.head.next.next = JSON.parse(this.head.next.next);
+      this.head.next.value = newVal;
+
+      return this;
+    }
+
+    let currentvalue = this.head.next;
+    while (currentvalue !== undefined) {
+      if (currentvalue.value === value) {
+        if (currentvalue.next !== null) {
+          let afterRes = currentvalue.next;
+          currentvalue.next.next = JSON.stringify(afterRes);
+          currentvalue.next.next = JSON.parse(currentvalue.next.next);
+          currentvalue.next.value = newVal;
+          return this;
+        } else if (currentvalue.next === null) {
+          return this.append(newVal);
+        }
+      } else {
+        currentvalue = currentvalue.next;
+        if (currentvalue === null) {
+          return 'dont exist the value which insert';
+        }
+      }
+    }
+  }
+}
+const ll = new LinkedList();
+console.log('this is my List:', ll);
+ll.insert(4);
+console.log('After insert', ll);
+ll.insert(5);
+ll.insert(7);
+ll.insert(8);
+
+console.log('After insert', ll);
+console.log('After insert', ll.toString());
+console.log('After insert', ll.insertbefore(9, 3));
+console.log('After insert', ll.toString());
+
+module.exports = LinkedList;
