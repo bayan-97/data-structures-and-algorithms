@@ -33,9 +33,14 @@
 -  insert after a node in the middle of the linked list
 
 -  insert a node after the last node of the linked list
+## TEST c
 
-
-
+Linked List end method
+    ✓ Where k is greater than the length of the linked list 
+    ✓ Where k and the length of the list are the same 
+    ✓  Where k is not a positive integer 
+    ✓  Where the linked list is of a size 1 
+    ✓ where k is not at the end, but somewhere in the middle of the linked list 
 TEST (A)
 
 ![](/challanges/assets/Capturecode5test.PNG)
@@ -46,7 +51,8 @@ TEST (B)
 
 ![](/challanges/assets/listed-testboard.PNG)
 
-
+TEST (c)
+![](/challanges/assets/end3.PNG)
 ### results 
 ![](/challanges/assetsCapturetestresu.PNG)
 
@@ -57,7 +63,8 @@ TEST (B)
 ![](/challanges/assets/listed-test2.PNG)
 ![](/challanges/assets/listed-test2.PNG)
 
-
+## result(C)
+![](/challanges/assets/end3.PNG)
 
 ## API
 1-  **method**
@@ -116,7 +123,7 @@ value as the string.
 
 ![](/challanges/assets/insert-before.PNG)
 
-
+7. `end(k)`  method takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
 # whitebord (A)
 
 1- ![](/challanges/assets/Linked-list.PNG)
@@ -133,3 +140,11 @@ value as the string.
 1- ![](/challanges/assets/list-testwhit1.PNG)
 
 1- ![](/challanges/assets/list-testwhit2.PNG)
+
+# whitebord (C)
+
+1- ![](/challanges/assets/end1.PNG)
+
+1- ![](/challanges/assets/end2.PNG)
+
+1- ![](/challanges/assets/end3.PNG)
