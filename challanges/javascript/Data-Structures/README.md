@@ -109,6 +109,7 @@ value as the string.
 
 
 ![](/challanges/assets/Capturecode53.PNG)
+
 4- `.append(value)` which added  a new node with the given value to the end of the list
 ![](/challanges/assets/append.PNG)
 
@@ -123,7 +124,9 @@ value as the string.
 
 ![](/challanges/assets/insert-before.PNG)
 
+
 7. `end(k)`  method takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+
 # whitebord (A)
 
 1- ![](/challanges/assets/Linked-list.PNG)
@@ -131,6 +134,7 @@ value as the string.
 2- ![](/challanges/assets/Linked-list2.PNGPNG)
 
 3- ![](/challanges/assets/Linked-list2.PNGPNG)
+
 
 # whitebord (B)
 
@@ -141,6 +145,7 @@ value as the string.
 
 1- ![](/challanges/assets/list-testwhit2.PNG)
 
+
 # whitebord (C)
 
 1- ![](/challanges/assets/end1.PNG)
@@ -148,3 +153,4 @@ value as the string.
 1- ![](/challanges/assets/end2.PNG)
 
 1- ![](/challanges/assets/end3.PNG)
+
