@@ -139,3 +139,59 @@ describe('Linked List', () => {
     expect(list.head.next.next.next.value).toEqual('salma');
   });
 });
+describe('Linked List end method', () => {
+  it('Where k is greater than the length of the linked list', () => {
+    const list = new LL();
+    const initValue = 'mahmoud';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.append(newValue);
+    const newValue1 = 'ahmad2';
+    list.append(newValue1);
+ 
+
+    expect(list.end(3)).toEqual('it isnot exiest in linklist');
+  });
+
+  it('Where k and the length of the list are the same', () => {
+    const list = new LL();
+    const initValue = 'mahmoud';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.append(newValue);
+    const newValue1 = 'ahmad2';
+    list.append(newValue1);
+
+    expect(list.end(2)).toEqual( 'mahmoud');
+  });
+  it(' Where k is not a positive integer', () => {
+    const list = new LL();
+    const initValue = 'mahmoud';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.insert(newValue);
+    const newValue1 = 'omer';
+    list.insert(newValue1);
+    expect(list.end(-2)).toEqual('omer');
+  });
+  it(' Where the linked list is of a size 1', () => {
+    const list = new LL();
+    const initValue = 'bayan';
+    list.insert(initValue);
+ 
+    expect(list.end(0)).toEqual('bayan');
+  });
+  it('where k is not at the end, but somewhere in the middle of the linked list', () => {
+    const list = new LL();
+    const initValue = 'bayan';
+    list.insert(initValue);
+    const newValue = 'ahmad';
+    list.insert(newValue);
+    const newValue1 = 'omer';
+    list.insert(newValue1);
+    const newValue2 = 'salma';
+    list.insert(newValue2);
+    expect(list.end(1)).toEqual('omer');
+  });
+ 
+});

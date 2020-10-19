@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 class Node {
   constructor(value) {
@@ -35,7 +35,7 @@ class LinkedList {
   }
   includes(valuexist) {
     console.log(valuexist);
-    console.log('lll', this.head.value);
+    console.log("lll", this.head.value);
     if (this.head.value === valuexist) {
       return 1;
     }
@@ -51,7 +51,7 @@ class LinkedList {
         return false;
       }
       currentvalue = currentvalue.next;
-      console.log('lll1', currentvalue);
+      console.log("lll1", currentvalue);
     }
     // return 0;
   }
@@ -100,7 +100,7 @@ class LinkedList {
   insertbefore(value, newVal) {
     if (this.head.value === value) {
       let afterRes = this.head;
-      console.log('lll', this.head);
+      console.log("lll", this.head);
       this.head.next = JSON.stringify(afterRes);
       this.head.next = JSON.parse(this.head.next);
       this.head.value = newVal;
@@ -119,7 +119,7 @@ class LinkedList {
       } else {
         currentvalue = currentvalue.next;
         if (currentvalue === null) {
-          return 'dont exist the value which insert';
+          return "dont exist the value which insert";
         }
       }
     }
@@ -149,23 +149,57 @@ class LinkedList {
       } else {
         currentvalue = currentvalue.next;
         if (currentvalue === null) {
-          return 'dont exist the value which insert';
+          return "dont exist the value which insert";
         }
       }
     }
   }
+  end(k) {
+    if (k < 0) {
+      let stringsValue = [];
+      let currentvalue = this.head;
+      stringsValue.push(this.head.value);
+      while (currentvalue.next !== null) {
+        currentvalue = currentvalue.next;
+        console.log(currentvalue);
+        stringsValue.push(currentvalue.value);
+      }
+      return stringsValue[k * -1];
+    }
+    let stringsValue = [];
+    let currentvalue = this.head;
+    stringsValue.push(this.head.value);
+    while (currentvalue.next !== null) {
+      currentvalue = currentvalue.next;
+      console.log(currentvalue);
+      stringsValue.push(currentvalue.value);
+    }
+    console.log(stringsValue);
+    let stringsValueRev = [];
+    let stringsValuelength = stringsValue.length - 1;
+    for (let index = 0; index < stringsValue.length; index++) {
+      stringsValueRev.push(stringsValue[stringsValuelength]);
+      stringsValuelength = stringsValuelength - 1;
+    }
+    console.log(stringsValueRev);
+    if (stringsValueRev[k] !== undefined) {
+      return stringsValueRev[k];
+    } else {
+      return "it isnot exiest in linklist";
+    }
+  }
 }
-const ll = new LinkedList();
-console.log('this is my List:', ll);
-ll.insert(4);
-console.log('After insert', ll);
-ll.insert(5);
-ll.insert(7);
-ll.insert(8);
+// const ll = new LinkedList();
+// console.log('this is my List:', ll);
+// ll.insert(4);
+// console.log('After insert', ll);
+// ll.insert(5);
+// ll.insert(7);
+// ll.insert(8);
 
-console.log('After insert', ll);
-console.log('After insert', ll.toString());
-console.log('After insert', ll.insertbefore(9, 3));
-console.log('After insert', ll.toString());
+// console.log('After insert', ll);
+// console.log('After insert', ll.toString());
+// console.log('After insert', ll.insertbefore(9, 3));
+// console.log('After insert', ll.toString());
 
 module.exports = LinkedList;
