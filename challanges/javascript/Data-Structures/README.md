@@ -120,6 +120,7 @@ it by use insert after mrthod
 return the ne link
 
 ![](/challanges/assets/Capturecode53.PNG)
+
 4- `.append(value)` which added  a new node with the given value to the end of the list
 ![](/challanges/assets/append.PNG)
 
@@ -134,8 +135,11 @@ return the ne link
 
 ![](/challanges/assets/insert-before.PNG)
 
+
 7. `end(k)`  method takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
+
 7. `lin(lin1,lin2)`  takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list
+
 # whitebord (A)
 
 1- ![](/challanges/assets/Linked-list.PNG)
@@ -143,6 +147,7 @@ return the ne link
 2- ![](/challanges/assets/Linked-list2.PNGPNG)
 
 3- ![](/challanges/assets/Linked-list2.PNGPNG)
+
 
 # whitebord (B)
 
@@ -153,6 +158,7 @@ return the ne link
 
 1- ![](/challanges/assets/list-testwhit2.PNG)
 
+
 # whitebord (C)
 
 1- ![](/challanges/assets/end1.PNG)
@@ -160,9 +166,11 @@ return the ne link
 1- ![](/challanges/assets/end2.PNG)
 
 1- ![](/challanges/assets/end3.PNG)
+
 # whitebord (D)
 1- ![](/challanges/assets/ch8wt.PNG)
 
 1- ![](/challanges/assets/ch8wt2.PNG)
 
 1- ![](/challanges/assets/ch8wt3.PNG)
+
