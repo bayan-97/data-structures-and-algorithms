@@ -188,18 +188,65 @@ class LinkedList {
       return "it isnot exiest in linklist";
     }
   }
-}
-// const ll = new LinkedList();
-// console.log('this is my List:', ll);
-// ll.insert(4);
-// console.log('After insert', ll);
-// ll.insert(5);
-// ll.insert(7);
-// ll.insert(8);
+  lin(an, bn) {
+    let stringsValue = [];
+    let all = [an, bn];
+    let twoarray = [];
+    for (let i = 0; i < all.length; i++) {
+      let currentvalue = all[i].head;
+      stringsValue.push(all[i].head.value);
+      while (currentvalue.next !== null) {
+        currentvalue = currentvalue.next;
+        console.log(currentvalue);
+        stringsValue.push(currentvalue.value);
+        console.log(stringsValue);
+      }
+      twoarray.push(stringsValue);
+      console.log(twoarray);
+      stringsValue = [];
+    }
 
-// console.log('After insert', ll);
-// console.log('After insert', ll.toString());
-// console.log('After insert', ll.insertbefore(9, 3));
-// console.log('After insert', ll.toString());
+    for (let i = 0; i < twoarray[0].length; i++) {
+      console.log(twoarray[0][i], twoarray[1][i]);
+      if (twoarray[0][i]!==undefined && twoarray[1][i]!==undefined) {
+        an.insertAfter(twoarray[0][i], twoarray[1][i]);
+      }
+    }
+    if (twoarray[0].length < twoarray[1].length) {
+      for (let i = 1; i <= (twoarray[1].length - twoarray[0].length); i++) {
+        console.log(twoarray[1][(twoarray[0].length -1)+ 1]);
+let sum =(twoarray[0].length -1)
+
+        an.insert(twoarray[1][sum++]);
+      }
+    }
+    console.log(an.toString());
+    return an;
+  }
+}
+const ll = new LinkedList();
+console.log("this is my List:", ll);
+ll.insert(1);
+console.log("After insert", ll);
+ll.insert(3);
+
+
+
+
+console.log("After inserbbbt", ll);
+console.log("After insert", ll.toString());
+const ll2 = new LinkedList();
+console.log("this is my List:", ll2);
+ll2.insert(5);
+console.log("After insert", ll2);
+ll2.insert(9);
+ll2.insert(4);
+
+
+
+
+console.log("After inserbbbt", ll2);
+console.log("After insert", ll2.toString());
+console.log("After insert", ll2.lin(ll, ll2));
 
 module.exports = LinkedList;
