@@ -208,16 +208,16 @@ class LinkedList {
 
     for (let i = 0; i < twoarray[0].length; i++) {
       console.log(twoarray[0][i], twoarray[1][i]);
-      if (twoarray[0][i]!==undefined && twoarray[1][i]!==undefined) {
+      if (twoarray[0][i] !== undefined && twoarray[1][i] !== undefined) {
         an.insertAfter(twoarray[0][i], twoarray[1][i]);
       }
     }
     if (twoarray[0].length < twoarray[1].length) {
-      for (let i = 1; i <= (twoarray[1].length - twoarray[0].length); i++) {
-        console.log(twoarray[1][(twoarray[0].length -1)+ 1]);
-let sum =(twoarray[0].length -1)
+      for (let i = 1; i <= twoarray[1].length - twoarray[0].length; i++) {
+        console.log(twoarray[1][twoarray[0].length - 1 + 1]);
+        let sum = twoarray[1].length - twoarray[0].length + 1;
 
-        an.insert(twoarray[1][sum++]);
+        an.insert(twoarray[1][sum]);
       }
     }
     console.log(an.toString());
@@ -229,6 +229,10 @@ console.log("this is my List:", ll);
 ll.insert(1);
 console.log("After insert", ll);
 ll.insert(3);
+ll.insert(3);
+// ll.insert(2);
+
+
 
 
 
@@ -240,13 +244,14 @@ console.log("this is my List:", ll2);
 ll2.insert(5);
 console.log("After insert", ll2);
 ll2.insert(9);
-ll2.insert(4);
+ll2.insert(1);
 
 
 
 
 console.log("After inserbbbt", ll2);
 console.log("After insert", ll2.toString());
-console.log("After insert", ll2.lin(ll, ll2));
+console.log("After insevvvrt", (ll2.lin(ll, ll2)).toString());
+console.log("After insert", ll.toString());
 
 module.exports = LinkedList;
