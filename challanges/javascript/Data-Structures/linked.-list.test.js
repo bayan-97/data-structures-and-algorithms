@@ -230,34 +230,25 @@ describe('Linked List end method', () => {
     list2.append(newValue);
     list2.lin(list, list2);
 
-    expect(list.toString()).toEqual('{1}->{5}->{3}->{9}->{2}->{NULL}');});
-  it(' Where k is not a positive integer', () => {
-    const list = new LL();
-    const initValue = 'mahmoud';
-    list.insert(initValue);
-    const newValue = 'ahmad';
-    list.insert(newValue);
-    const newValue1 = 'omer';
-    list.insert(newValue1);
-    expect(list.end(-2)).toEqual('omer');
+    expect(list.toString()).toEqual('{1}->{5}->{3}->{9}->{2}->{NULL}');
   });
-  // it(' Where the linked list is of a size 1', () => {
-  //   const list = new LL();
-  //   const initValue = 'bayan';
-  //   list.insert(initValue);
 
-  //   expect(list.end(0)).toEqual('bayan');
-  // });
-  // it('where k is not at the end, but somewhere in the middle of the linked list', () => {
-  //   const list = new LL();
-  //   const initValue = 'bayan';
-  //   list.insert(initValue);
-  //   const newValue = 'ahmad';
-  //   list.insert(newValue);
-  //   const newValue1 = 'omer';
-  //   list.insert(newValue1);
-  //   const newValue2 = 'salma';
-  //   list.insert(newValue2);
-  //   expect(list.end(1)).toEqual('omer');
-  // });
+  it('3', () => {
+    let list = new LL();
+    let initValue = 1;
+    list.insert(initValue);
+    let newValue = 3;
+    list.append(newValue);
+    let list2 = new LL();
+    initValue = 5;
+    list2.insert(initValue);
+    newValue = 9;
+    list2.append(newValue);
+    let newValue1 = 2;
+    list2.append(newValue1);
+    console.log(list2.toString());
+    list2.lin(list, list2);
+
+    expect(list.toString()).toEqual('{1}->{5}->{3}->{9}->{2}->{NULL}');
+  });
 });
