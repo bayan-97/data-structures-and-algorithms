@@ -189,35 +189,38 @@ class LinkedList {
     }
   }
   lin(an, bn) {
-    let array = [];
-
-    let currentvalue = an.head;
-    let currentvalue2 = bn.head;
-
-    while (currentvalue.next) {
-      array.push(currentvalue.value);
-      currentvalue = currentvalue.next;
-    }
-    array.push(currentvalue.value);
-    console.log('d', array);
-    for (let index = 0; index < array.length - 1; index++) {
-      while (currentvalue2.next) {
-        //  console.log(index,array[index++], currentvalue2.value)
-
-        an.insertAfter(array[index++], currentvalue2.value);
-
-        currentvalue2 = currentvalue2.next;
+    let stringsValue = [];
+    let all = [an, bn];
+    let twoarray = [];
+    for (let i = 0; i < all.length; i++) {
+      let currentvalue = all[i].head;
+      stringsValue.push(all[i].head.value);
+      while (currentvalue.next !== null) {
+        currentvalue = currentvalue.next;
+        console.log(currentvalue);
+        stringsValue.push(currentvalue.value);
+        console.log(stringsValue);
       }
-      an.insertAfter(array[index], currentvalue2.value);
+      twoarray.push(stringsValue);
+      console.log(twoarray);
+      stringsValue = [];
     }
 
-    console.log('ccg', an.toString());
-
-    if (!currentvalue2.next) {
-      an.insert(currentvalue2.value);
+    for (let i = 0; i < twoarray[0].length; i++) {
+      console.log(twoarray[0][i], twoarray[1][i]);
+      if (twoarray[0][i] !== undefined && twoarray[1][i] !== undefined) {
+        an.insertAfter(twoarray[0][i], twoarray[1][i]);
+      }
     }
+    if (twoarray[0].length < twoarray[1].length) {
+      for (let i = 1; i <= twoarray[1].length - twoarray[0].length; i++) {
+        console.log(twoarray[1][twoarray[0].length - 1 + 1]);
+        let sum = twoarray[1].length - twoarray[0].length + 1;
 
-    console.log('ccg22', an.toString());
+        an.insert(twoarray[1][sum]);
+      }
+    }
+    console.log(an.toString());
     return an;
   }
 }
