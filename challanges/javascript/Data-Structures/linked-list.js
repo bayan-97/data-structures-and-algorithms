@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 class Node {
   constructor(value) {
@@ -35,7 +35,7 @@ class LinkedList {
   }
   includes(valuexist) {
     console.log(valuexist);
-    console.log("lll", this.head.value);
+    console.log('lll', this.head.value);
     if (this.head.value === valuexist) {
       return 1;
     }
@@ -51,7 +51,7 @@ class LinkedList {
         return false;
       }
       currentvalue = currentvalue.next;
-      console.log("lll1", currentvalue);
+      console.log('lll1', currentvalue);
     }
     // return 0;
   }
@@ -100,7 +100,7 @@ class LinkedList {
   insertbefore(value, newVal) {
     if (this.head.value === value) {
       let afterRes = this.head;
-      console.log("lll", this.head);
+      console.log('lll', this.head);
       this.head.next = JSON.stringify(afterRes);
       this.head.next = JSON.parse(this.head.next);
       this.head.value = newVal;
@@ -119,7 +119,7 @@ class LinkedList {
       } else {
         currentvalue = currentvalue.next;
         if (currentvalue === null) {
-          return "dont exist the value which insert";
+          return 'dont exist the value which insert';
         }
       }
     }
@@ -149,7 +149,7 @@ class LinkedList {
       } else {
         currentvalue = currentvalue.next;
         if (currentvalue === null) {
-          return "dont exist the value which insert";
+          return 'dont exist the value which insert';
         }
       }
     }
@@ -185,7 +185,7 @@ class LinkedList {
     if (stringsValueRev[k] !== undefined) {
       return stringsValueRev[k];
     } else {
-      return "it isnot exiest in linklist";
+      return 'it isnot exiest in linklist';
     }
   }
   lin(an, bn) {
@@ -199,7 +199,7 @@ class LinkedList {
       currentvalue = currentvalue.next;
     }
     array.push(currentvalue.value);
-    console.log("d", array);
+    console.log('d', array);
     for (let index = 0; index < array.length - 1; index++) {
       while (currentvalue2.next) {
         //  console.log(index,array[index++], currentvalue2.value)
@@ -211,36 +211,36 @@ class LinkedList {
       an.insertAfter(array[index], currentvalue2.value);
     }
 
-    console.log("ccg", an.toString());
+    console.log('ccg', an.toString());
 
     if (!currentvalue2.next) {
       an.insert(currentvalue2.value);
     }
 
-    console.log("ccg22", an.toString());
+    console.log('ccg22', an.toString());
     return an;
   }
 }
 const ll = new LinkedList();
-console.log("this is my List:", ll);
+console.log('this is my List:', ll);
 ll.insert(1);
-console.log("After insert", ll);
+console.log('After insert', ll);
 ll.insert(3);
 ll.insert(3);
 // ll.insert(2);
 
-console.log("After inserbbbt", ll);
-console.log("After insert", ll.toString());
+console.log('After inserbbbt', ll);
+console.log('After insert', ll.toString());
 const ll2 = new LinkedList();
-console.log("this is my List:", ll2);
+console.log('this is my List:', ll2);
 ll2.insert(5);
-console.log("After insert", ll2);
+console.log('After insert', ll2);
 ll2.insert(9);
 ll2.insert(1);
 
-console.log("After inserbbbt", ll2);
-console.log("After insert", ll2.toString());
-console.log("After insevvvrt", ll2.lin(ll, ll2).toString());
-console.log("After insert", ll.toString());
+console.log('After inserbbbt', ll2);
+console.log('After insert', ll2.toString());
+console.log('After insevvvrt', ll2.lin(ll, ll2).toString());
+console.log('After insert', ll.toString());
 
 module.exports = LinkedList;
