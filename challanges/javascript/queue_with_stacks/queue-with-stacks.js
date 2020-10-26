@@ -7,7 +7,7 @@ class Node {
   }
 }
 
-class PseudoQueue {
+class PseudoQueue{
   constructor(value) {
     if (value) {
       this.node = value.top;
@@ -45,4 +45,5 @@ class PseudoQueue {
     return currentvalue.value;
   }
 
+}
 module.exports=PseudoQueue;
