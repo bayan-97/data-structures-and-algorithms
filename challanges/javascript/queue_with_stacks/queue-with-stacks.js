@@ -7,7 +7,7 @@ class Node {
   }
 }
 
-class PseudoQueue {
+class PseudoQueue{
   constructor(value) {
     if (value) {
       this.node = value.top;
@@ -25,11 +25,6 @@ class PseudoQueue {
     this.node = top;
     console.log('DD', this.node);
 
-    // let currentvalue = this.node.top;
-    // while (currentvalue.next) {
-    //   currentvalue = currentvalue.next;
-    // }
-    // currentvalue.next = new Node(value);
     return this;
   }
   dequeue() {
@@ -47,16 +42,8 @@ class PseudoQueue {
     let term = previescure;
     term.next = null;
 
-    // this.node=term
-    // this.node  = ;
-    // term.next = null;
     return currentvalue.value;
   }
+
 }
-// const ll = new Stack();
-// ll.push(20);
-// ll.push(15);
-// ll.push(10);
-// const ll2 = new PseudoQueue(ll);
-// ll2.enqueue(5);
 module.exports=PseudoQueue;

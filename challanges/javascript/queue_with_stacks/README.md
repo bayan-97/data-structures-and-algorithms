@@ -12,8 +12,10 @@ dequeue() which extracts a value from the PseudoQueue, using a first-in, first-o
 
 ### TEST 
 
+1- ![](/challanges/assets/chall11test.PNG)
 
 ### results 
+1- ![](/challanges/assets/chall11res.PNG)
 
 
 
@@ -25,6 +27,8 @@ dequeue() which extracts a value from the PseudoQueue, using a first-in, first-o
 # whitebord 
 
 1- ![](/challanges/assets/chall11.PNG)
+1- ![](/challanges/assets/chall11white.PNG)
+
 
 
 
