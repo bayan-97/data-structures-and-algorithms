@@ -31,5 +31,5 @@ If the value is divisible by 3, replace the value with “Fizz” (3 ms)
 
 # whitebord 
 
-1- ![](/challanges/assets/chall19white.PNG)
+1- ![](/challanges/assets/chall26.PNG)
 
