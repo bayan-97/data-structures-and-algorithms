@@ -55,3 +55,4 @@ function merge(left, right, arr1) {
 }
 
 console.log(mergesort(array));
+module.exports = mergesort;
