@@ -10,7 +10,7 @@ use this way to sort the array
    ✓  return sort   array
 1- ![](/challanges/assets/chall27solve.PNG)
 
-1-
+
 
 
 
