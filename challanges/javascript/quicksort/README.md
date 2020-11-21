@@ -8,14 +8,16 @@ use this way to sort the array
 
 ### TEST 
    ✓  return sort   array
-1- ![](/challanges/assets/chall27solve.PNG)
+1- ![](/challanges/assets/chall28test.PNG)
+1- ![](/challanges/assets/chall28solve.PNG)
 
 
+1-
 
 
 
 ### results 
-1- ![](/challanges/assets/chall27res.PNG)
+1- ![](/challanges/assets/chall28res.PNG)
 
 
 
